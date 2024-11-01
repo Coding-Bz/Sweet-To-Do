@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2c2f33; /* Dunkler Hintergrund */
+    font-family: 'Georgia', serif; /* Serifenschrift für Vintage-Stil */
+    color: #f0e68c;
+    margin: 0;
+    padding: 0;
+    background-image: url('B3.jpg');
+}
+
+#myH1 {
+    font-size: 5vh;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 5vh;
+}
+
+hr {
+    width: 25%;
+    background-color: #d3c6b8; /* Sanfte, vintage-farbene Linie */
+    height: 5px;
+    border-radius: 1em;
+    border: none;
+}
+
+#container {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vh 3vw;
+    border-radius: 15px;
+    background-color: #4b4e53;
+    height: 100%;
+    width: 100%;
+    max-width: 60%;
+}
+
+#inputContainer {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#inputField {
+    flex: 1;
+    height: auto; /* Höhe anpassen */
+    min-height: 46px; /* Minimale Höhe */
+    max-height: 100px; /* Maximale Höhe, um das Layout zu wahren */
+    border: 2px solid #d3c6b8;
+    outline: none;
+    font-size: 25px;
+    padding: 10px;
+    color: #d3c6b8;
+    background-color: #1A1A1A;
+    border-radius: 12px;
+    resize: none; /* Benutzer daran hindern, die Größe zu ändern */
+    overflow: auto; /* Zeigt einen Scrollbalken, wenn der Text zu lang ist */
+}
+
+#addToDo {
+    height: 50px;
+    width: 50px;
+    border: 2px solid #d3c6b8;
+    font-size: 30px;
+    color: #d3c6b8;
+    background-color: transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.material-symbols-outlined {
+    font-size: 30px;
+}
+
+#addToDo:hover {
+    color: #0D0D0D;
+}
+
+.to-dos {
+    width: 100%;
+}
+
+.to-do-item {
+    width: 100%; /* Breite anpassen */
+    padding: 10px; /* Abstand hinzufügen */
+    background-color: #4b4e53; /* Hintergrundfarbe */
+    border: 2px solid #d3c6b8; /* Rahmenfarbe */
+    border-radius: 12px; /* Abgerundete Ecken */
+    margin: 10px 0; /* Abstand zwischen den Aufgaben */
+    color: #d3c6b8; /* Textfarbe */
+    word-wrap: break-word; /* Textumbruch aktivieren */
+    font-size: 25px; /* Schriftgröße */
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 900px) {
+    #myH1 {
+        font-size: 4.5vh;
+    }
+    #inputField {
+        font-size: 20px;
+    }
+    #addToDo {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    #myH1 {
+        font-size: 4vh;
+    }
+    #inputField {
+        font-size: 18px;
+    }
+    #addToDo {
+        font-size: 20px;
+    }
+}

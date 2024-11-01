@@ -1,0 +1,216 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    rgba(0,0,0,0.7),rgba(0,0,0,0.7)
+),url(Background.jpg);
+}
+
+/* Body styling */
+body {
+  min-height: 100vh;
+  background-color: #2c2f33; /* Dark vintage background */
+  color: #f5f5dc; /* Beige for vintage contrast */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Georgia', serif; /* Vintage serif font */
+  padding: 2rem;
+  background-image: linear-gradient(
+    rgba(0,0,0,0.7),rgba(0,0,0,0.7)
+),url(Background.jpg);
+}
+
+/* Title styling */
+h2 {
+  color: #f5f5dc; /* Light color to contrast background */
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* Button container styling */
+.button-container {
+  display: flex;
+  gap: 2rem;
+  background-color: bisque; /* Even spacing between buttons */
+}
+
+/* Individual button and description container */
+.button-item {
+  text-align: center;
+}
+
+/* Button styling */
+button {
+  background-color: transparent;
+  background-size: cover;
+  border: none;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  filter: grayscale(30%);
+  background-color: bisque;
+}
+
+button:hover {
+  transform: scale(1.1); /* Subtle grow effect on hover */
+  filter: grayscale(0%);
+  background-color: bisque;
+}
+
+/* Button-specific background images */
+.btn-todo {
+  background-image: url('Checkliste.jpg');
+  background-position: center;
+  background-color: bisque;
+  color: #dcdcdc;
+}
+
+.btn-alarm {
+  background-image: url('Alarm.jpg');
+  background-position: center;
+}
+
+.btn-tomato {
+  background-image: url('Tomate.jpg');
+  background-position: center;
+}
+
+/* Größere kreisförmige Buttons in der Mitte */
+.button-container button {
+height: 33vh; /* Größere Höhe */
+width: 33vh; /* Größere Breite */
+background-color: #f5f5dc; /* Farbe des Kreises */
+border: none;
+border-radius: 50%; /* Runde Form */
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+
+/* Hover-Effekt für die großen Buttons */
+.button-container button:hover {
+transform: scale(1.1); /* Subtiles Vergrößern beim Hover */
+}
+
+/* Container für die Buttons oben rechts */
+.top-right-buttons {
+position: absolute;
+top: 1rem;
+right: 1rem;
+display: flex;
+gap: 1rem; /* Abstand zwischen den kleinen Buttons */
+}
+
+/* Kleinere Buttons oben rechts */
+.top-right-buttons button {
+height: 30px; /* Kleine Höhe */
+width: 30px; /* Kleine Breite */
+background-color: #f5f5dc;
+border-radius: 50%;
+border: none;
+cursor: pointer;
+}
+
+.top-right-buttons button:hover {
+background-color: #dcdcdc;
+}
+
+/* Dropdown Container */
+.theme-dropdown {
+position: absolute;
+top: 1rem;
+right: 1rem;
+}
+
+/* Dropdown Button Styling */
+.theme-dropdown-button {
+background-color: #f5f5dc;
+color: whitesmoke;
+padding: 0.5rem 1rem;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+display: flex;
+align-items: center;
+font-size: 1rem;
+}
+
+/* Icon alignment */
+.material-icons {
+margin-left: 0.5rem;
+font-size: 1.2rem;
+}
+
+/* Hidden Dropdown Menu */
+.theme-selection {
+display: none;
+position: absolute;
+top: 2.5rem;
+right: 0;
+background-color: #f5f5dc;
+border-radius: 5px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+padding: 0.5rem;
+z-index: 100;
+}
+
+/* Theme Options with Different Colors */
+.button.theme-option {
+  color: #dcdcdc;
+}
+
+.theme-option:nth-child(2) {
+  background-color: #88b04b; /* Olivgrün */
+}
+
+.theme-option:nth-child(3) {
+  background-color: #ff6f61; /* Korallrot */
+}
+
+.theme-option:nth-child(4) {
+  background-color: #f7cac9; /* Pastellrosa */
+}
+
+.theme-option:nth-child(5) {
+  background-color: #92a8d1; /* Blasses Blau */
+}
+
+.theme-option {
+display: block;
+width: 100%;
+padding: 0.5rem;
+border: none;
+text-align: left;
+cursor: pointer;
+font-size: 1rem;
+color:whitesmoke;
+transition: background-color 0.3s ease;
+}
+
+.theme-option:hover {
+background-color: #e0e0e0;
+}
+
+/* Show the theme-selection menu when not hidden */
+.theme-selection:not(.hidden) {
+display: block;
+}
+/* Style für das Dropdown-Menü versteckt */
+.hidden {
+  display: none;
+}
+
+.button-description{
+ font-size: 3vh;
+  padding: 20px;
+}
+h2 {
+  padding: 2vh; /* Abstand um das <h2>-Element herum */
+  text-decoration: underline; /* Fügt die Unterlinie hinzu */
+  text-underline-offset: 20px; /* Abstand zwischen Text und Unterlinie */
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Selectionsite.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>Selection Site</title>
+</head>
+
+<body class="classic-theme">
+
+
+  </div>
+
+  <!-- Title -->
+  <h2>Selection Site</h2>
+
+  <!-- Button Container with Descriptions -->
+  <div class="button-container">
+    <!-- To-Do List Button and Description -->
+    <div class="button-item">
+      <button class="btn-todo" onclick="window.location.href='To-Do-List.html';" aria-label="To-Do List"></button>
+      <p class="button-description">To-do list</p>
+    </div>
+
+    <!-- Alarm Button and Description -->
+    <div class="button-item">
+      <button class="btn-alarm" onclick="window.location.href='Stoppuhr.html';" aria-label="Alarm"></button>
+      <p class="button-description">Stopwatch</p>
+    </div>
+
+    <!-- Pomodoro Button and Description -->
+    <div class="button-item">
+      <button class="btn-tomato" onclick="window.location.href='Promodoro.html';" aria-label="Pomodoro Timer"></button>
+      <p class="button-description">Pomodoro technique</p>
+    </div>
+  </div>
+
+
+
+  <!-- JavaScript to handle theme change and dropdown toggle -->
+  <script>
+    function setTheme(theme) {
+      document.body.className = theme;
+    }
+
+    function toggleDropdown() {
+      const themeSelection = document.querySelector('.theme-selection');
+      themeSelection.classList.toggle('hidden');
+    }
+  </script>
+</body>
+
+</html>

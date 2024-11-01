@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic reset */
+
+  
+  /* Title styling */
+  h2 {
+    color: #f5f5dc; /* Light color to contrast background */
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  
+  /* Button container styling */
+  .button-container {
+    display: flex;
+    gap: 2rem;
+   /
+  }
+  
+  /* Individual button and description container */
+  .button-item {
+    text-align: center;
+  }
+  
+  /* Button styling */
+  button {
+    
+    background-size: cover;
+    border: none;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    filter: grayscale(30%);
+    background-color:#2c2f33;
+  }
+  
+  button:hover {
+    transform: scale(1.1); /* Subtle grow effect on hover */
+    filter: grayscale(0%);
+   
+  }
+  
+  /* Button-specific background images */
+  .btn-todo {
+    background-image: url('Checkliste.jpg');
+    background-position: center;
+    
+    color: #dcdcdc;
+  }
+  
+  .btn-alarm {
+    background-image: url('Alarm.jpg');
+    background-position: center;
+  }
+  
+  .btn-tomato {
+    background-image: url('Tomate.jpg');
+    background-position: center;
+  }
+  
+  /* Größere kreisförmige Buttons in der Mitte */
+  .button-container button {
+  height: 33vh; /* Größere Höhe */
+  width: 33vh; /* Größere Breite */
+ 
+  border: none;
+  border-radius: 50%; /* Runde Form */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  }
+  
+  /* Hover-Effekt für die großen Buttons */
+  .button-container button:hover {
+  transform: scale(1.1); /* Subtiles Vergrößern beim Hover */
+  }
+  
+  /* Container für die Buttons oben rechts */
+  .top-right-buttons {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem; /* Abstand zwischen den kleinen Buttons */
+  }
+  
+  /* Kleinere Buttons oben rechts */
+  .top-right-buttons button {
+  height: 30px; /* Kleine Höhe */
+  width: 30px; /* Kleine Breite */
+  background-color:#2c2f33;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  }
+  
+  .top-right-buttons button:hover {
+  background-color: #dcdcdc;
+  }
+  
+  /* Dropdown Container */
+  .theme-dropdown {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  }
+  
+  /* Dropdown Button Styling */
+  .theme-dropdown-button {
+ 
+  color: whitesmoke;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  }
+  
+  /* Icon alignment */
+  .material-icons {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  }
+  
+  /* Hidden Dropdown Menu */
+  .theme-selection {
+  display: none;
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  background-color:#2c2f33;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  z-index: 100;
+  }
+  
+ 
+  .theme-option {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+  color:whitesmoke;
+  transition: background-color 0.3s ease;
+  }
+  
+  
+  
+  /* Show the theme-selection menu when not hidden */
+  .theme-selection:not(.hidden) {
+  display: block;
+  }
+  /* Style für das Dropdown-Menü versteckt */
+  .hidden {
+    display: none;
+  }
+  
+  .button-description{
+   font-size: 3vh;
+    padding: 20px;
+  }
+  h2 {
+    padding: 2vh; /* Abstand um das <h2>-Element herum */
+    text-decoration: underline; /* Fügt die Unterlinie hinzu */
+    text-underline-offset: 20px; /* Abstand zwischen Text und Unterlinie */
+  }
+  
+body {
+    min-height: 100vh;
+    background-color: #2c2f33; /* Dunkler Hintergrund */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Georgia', serif; /* Serifenschrift für Vintage-Stil */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    color: #d3d3d3; /* Helle Schriftfarbe für Kontrast */
+    background-color: #4b4e53; /* Dunkles, neutrales Container-Hintergrund */
+    border-radius: 1em;
+    padding: 4em 3em;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sanfte Schatten für Tiefe */
+}
+
+.title {
+    font-size: 3em;
+    text-align: center;
+    color: #f0e68c; /* Helle Akzentfarbe */
+}
+
+hr {
+    width: 100%;
+    background-color: #d3c6b8; /* Sanfte, vintage-farbene Linie */
+    height: 5px;
+    border-radius: 1em;
+    border: none;
+}
+
+.timer {
+    font-size: 10em;
+    font-weight: 700;
+    color: #f0e68c; /* Gleiche helle Akzentfarbe */
+}
+
+.button-wrapper {
+    display: flex;
+    gap: 1em;
+}
+
+button {
+    font-size: 2em;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 0.5em 1.5em;
+    border: none;
+    border-radius: 5px; /* Abgerundete Ecken für Buttons */
+    color: white; /* Schriftfarbe für Buttons */
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Schatten für Buttons */
+}
+
+button:hover {
+    transform: translateY(-5px);
+}
+
+#start {
+    background-color: rgb(87, 128, 87); /* Sanftes Grün */
+}
+
+#stop {
+    background-color: rgb(204, 102, 102); /* Sanftes Rot */
+}
+
+#reset {
+    background-color: rgb(102, 153, 204); /* Sanftes Blau */
+}

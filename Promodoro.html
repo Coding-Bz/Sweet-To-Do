@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Promodoro.css">
+  <title>Pomodoro Timer</title>
+  <style>
+    /* Alle bisherigen CSS-Regeln... */
+
+    /* Back button styling */
+    .back-button {
+      position: absolute;
+      top: 1rem; /* Abstand vom oberen Rand */
+      left: 1rem; /* Abstand vom linken Rand */
+      background-color: #2c2f33; /* Hintergrundfarbe des Buttons */
+      color: whitesmoke; /* Schriftfarbe */
+      border: none; /* Kein Rand */
+      border-radius: 5px; /* Abgerundete Ecken */
+      padding: 0.5rem 1rem; /* Innenabstand */
+      cursor: pointer; /* Cursor beim Hover */
+      font-size: 1rem; /* Schriftgröße */
+      transition: background-color 0.3s ease; /* Sanfter Übergang */
+    }
+
+    .back-button:hover {
+      background-color: #e0e0e0; /* Hintergrundfarbe beim Hover */
+      color: #2c2f33; /* Schriftfarbe beim Hover */
+    }
+  </style>
+</head>
+
+<body >
+  <button class="back-button" onclick="goBack()">← Zurück</button> <!-- Back button -->
+  <div class="theme-dropdown">
+    <button class="theme-dropdown-button" onclick="toggleDropdown()">Design auswählen</button>
+    <div class="theme-selection hidden">
+      <button   class="theme-option" onclick="window.location.href='PromodoroM.html'">Mathematik</button>
+      <button class="theme-option" onclick="window.location.href='PromodoroB.html'">Chemie/Biologie</button>
+      <button class="theme-option" onclick="window.location.href='PromodoroL.html'">Sprachen</button>
+      <button class="theme-option" onclick="window.location.href='Promodoro.html'">Klassisch</button>
+    </div>
+  </div>
+  <div class="container">
+    <h1 class="title">Pomodoro Timer</h1>
+    <hr>
+    <p class="timer" id="timer">25:00</p>
+    <div class="button-wrapper">
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+      <button id="reset">Reset</button>
+    </div>
+  </div>
+  <script src="Promodoro.js"></script>
+  <script>
+    function setTheme(theme) {
+      document.body.className = theme;
+    }
+
+    function toggleDropdown() {
+      const themeSelection = document.querySelector('.theme-selection');
+      themeSelection.classList.toggle('hidden');
+    }
+
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+
+</html>

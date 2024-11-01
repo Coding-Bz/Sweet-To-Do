@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To-Do-Liste</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="To-Do-List.css">
+</head>
+<style>
+    /* Alle bisherigen CSS-Regeln... */
+
+    /* Back button styling */
+    .back-button {
+      position: absolute;
+      top: 1rem; /* Abstand vom oberen Rand */
+      left: 1rem; /* Abstand vom linken Rand */
+      background-color: #2c2f33; /* Hintergrundfarbe des Buttons */
+      color: whitesmoke; /* Schriftfarbe */
+      border: none; /* Kein Rand */
+      border-radius: 5px; /* Abgerundete Ecken */
+      padding: 0.5rem 1rem; /* Innenabstand */
+      cursor: pointer; /* Cursor beim Hover */
+      font-size: 1rem; /* Schriftgröße */
+      transition: background-color 0.3s ease; /* Sanfter Übergang */
+    }
+
+    .back-button:hover {
+      background-color: #e0e0e0; /* Hintergrundfarbe beim Hover */
+      color: #2c2f33; /* Schriftfarbe beim Hover */
+    }
+  </style>
+<body  style="background-image:url('B2.jpg');">
+
+    <button class="back-button" onclick="goBack()">← Zurück</button> <!-- Back button -->
+    <div class="theme-dropdown">
+      <button class="theme-dropdown-button" onclick="toggleDropdown()">Design auswählen</button>
+      <div class="theme-selection hidden">
+        <button class="theme-option" onclick="window.location.href='To-Do-ListM.html'">mathematics</button>
+        <button class="theme-option" onclick="window.location.href='To-Do-ListB.html'">chemistry/biology</button>
+        <button class="theme-option" onclick="window.location.href='To-Do-ListL.html'">languages</button>
+        <button class="theme-option" onclick="window.location.href='To-Do-List.html'">classic</button>
+      </div>
+    </div>
+    <h1 id="myH1">To-Do-List</h1> 
+    <hr>
+    <div id="container">
+        <div id="inputContainer">
+            <textarea id="inputField" placeholder="Aufgabe hinzufügen..." rows="1"></textarea>
+            <button id="addToDo"><span class="material-symbols-outlined">add</span></button>
+        </div>
+        
+        <div class="to-dos" id="toDoContainer"></div>
+    </div>
+    <script src="To-Do-List.js"></script>
+
+    
+</body>
+
+<script>
+    function setTheme(theme) {
+      document.body.className = theme;
+    }
+
+    function toggleDropdown() {
+      const themeSelection = document.querySelector('.theme-selection');
+      themeSelection.classList.toggle('hidden');
+    }
+
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</html>

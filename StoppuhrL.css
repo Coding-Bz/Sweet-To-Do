@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #2c2f33; /* Dunkler Hintergrund */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Georgia', serif; /* Serifenschrift für Vintage-Stil */
+    color: #d3d3d3;
+    background-image: url('B3.jpg');
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    color: #d3d3d3; /* Helle Schriftfarbe für Kontrast */
+    background-color: #4b4e53; /* Dunkler, neutraler Container-Hintergrund */
+    border-radius: 1em;
+    padding: 4em 3em;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sanfter Schatten für Tiefe */
+   
+}
+
+#myH1 {
+    font-size: 3em;
+    color: #f0e68c; /* Helle Akzentfarbe */
+    text-align: center;
+}
+
+#display {
+    font-size: 8em;
+    font-weight: 700;
+    color: #f0e68c; /* Gleiche Akzentfarbe */
+}
+
+#controls {
+    display: flex;
+    gap: 1em;
+}
+
+#controls button {
+    font-size: 1.5em;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 0.5em 1.5em;
+    border: none;
+    border-radius: 5px; /* Abgerundete Ecken */
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#startBtn {
+    background-color: rgb(87, 128, 87); /* Sanftes Grün */
+}
+
+#stopBtn {
+    background-color: rgb(204, 102, 102); /* Sanftes Rot */
+}
+
+#resetBtn {
+    background-color: rgb(102, 153, 204); /* Sanftes Blau */
+}
+
+#controls button:hover {
+    transform: translateY(-5px);
+}
+hr {
+    width: 100%;
+    background-color: #d3c6b8; /* Sanfte, vintage-farbene Linie */
+    height: 5px;
+    border-radius: 1em;
+    border: none;
+}
