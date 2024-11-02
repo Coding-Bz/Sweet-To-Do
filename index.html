@@ -5,19 +5,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sweet-To-Do</title>
   <link rel="stylesheet" href="Firstpage.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #000;
+      background-color: #ffffff;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+  
+
+    .col {
+      max-width: 45%;
+    }
+
+    .col h1 {
+      font-size: 3em;
+      color: #000000;
+      margin-bottom: 0.5em;
+      font-weight: bold;
+      margin-top: 30vh;
+    }
+
+    .col p {
+      font-size: 1.25em;
+      line-height: 1.6;
+      color: #333;
+      
+    }
+
+    .col p span {
+      color: #007bff; /* Accent color for emphasis */
+      font-weight: bold;
+    }
+
+    button {
+      font-size: 1em;
+      padding: 0.75em 1.5em;
+      background-color: #484d54;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      
+    }
+
+    button:hover {
+      background-color:#2c2f33;
+    }
+
+    button a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .animation-section {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: -300px;
+  
+    }
+
+    .animation-section video {
+      width: 100%;
+      max-width: 1200px;
+      width: 500px;
+      border-radius: 10px;
+      background-color: #2a1313;
+      
+      margin-right: -500px;
+      margin-bottom: 180px;
+    }
+
+    @media screen and (max-width: 800px) {
+      .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10% 5%;
+      }
+
+      .animation-section video {
+        width: 100%;
+      
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-  
-    </header>
-
-    <main class="row">
-      <section class="col">
-        <h1>SW-TD</h1>
-        <p>By Elif, Sophia and Lynn</p>
-        <button style="color: aliceblue;"><a href="Selectionsite.html">Explore</a></button>
-      </section>
+    <main class="col">
+      <h1>Effortlessly Organize</h1>
+      <p>Transform your tasks into <span>accomplishments</span> with ease and elegance. Let Sweet-To-Do simplify your day.</p>
+      <button><a href="Selectionsite.html">Explore</a></button>
     </main>
+
+    <div class="animation-section">
+      <video autoplay loop muted playsinline>
+        <source src="Videoprojekt.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
   </div>
 </body>
 </html>
